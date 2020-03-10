@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<htm>
+  <!------------------------------------------------HEAD-------------------------------------->
+  <head>
+    <!--viewport for sizing content on mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--external css for styling-->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!--internal css for styling-->
+    <style>
+      #containers {
+        display: flex;
+      }
+    </style>
+  </head>
+
+  <!------------------------------------------------BODY------------------------------------->
+  <body>
+    <h1 class="display-4">CRUD on DOM App</h1>
+    <p>&copy; An App From Andrew Tugume 2020 v1.0.0</p>
+
+    <div id="containers">
+      <!--Where To CREATE-->
+      <div class="card" style="width: 18rem;">
+        <div>
+          <button onclick="create()">RECREATE me</button>
+        </div>
+      </div>
+      <br />
+
+      <!--Where To READ and display FROM-->
+      <div class="card" style="width: 18rem;">
+        <span id="read" style="font-size: 15px; font-weight: bold;">
+          READ me
+        </span>
+        <br />
+        <button onclick="readShow()">
+          Let Me Read You
+        </button>
+        <!--display here-->
+        <p
+          id="show"
+          style="color:green; font-size: 20px; font-weight: bold;"
+        ></p>
+      </div>
+      <br />
+
+      <!-- Where to UPDATE-->
+      <div class="card" style="width: 18rem;">
+        <div id="root" style="color: green;">UPDATE Me</div>
+        <button onclick="update()" id="remove">Let Me UPDATE You</button>
+      </div>
+      <br />
+
+      <!--Where To Delete-->
+      <div class="card" style="width: 18rem;">
+        <div id="delete">
+          DELETE me
+        </div>
+        <button onclick="go()" id="remove">Let Me Delete You</button>
+      </div>
+      <br />
+    </div>
+
+    <script src="dom.js"></script>
+  </body>
+</htm>
